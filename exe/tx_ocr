@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'tx_ocr/cli'
+
+TxOcr::CLI.start
