@@ -47,7 +47,7 @@ module TxNlp
     end
 
     def fixed_paramaters
-      { 'Nonce' => '2373', 'Region' => region, 'SecretId' => secret_id, 'Timestamp' => Time.now.to_i.to_s, 'Version' => '2018-11-19' }
+      { 'Nonce' => '2373', 'Region' => region, 'SecretId' => secret_id, 'Timestamp' => Time.now.to_i.to_s, 'Version' => '2019-04-08' }
     end
 
     def to_params(original_hash)
