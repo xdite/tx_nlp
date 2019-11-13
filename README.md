@@ -22,9 +22,7 @@ gem 'tx_nlp'
 ---
 :secret_key: ""
 :secret_id: ""
-:region: "ap-beijing"
-:bucket: ""
-:parent_path: "/ocr"
+:region: "ap-guangzhou"
 
 ```
 
