@@ -1,6 +1,6 @@
-# TxNlp 腾讯OCR
+# TxNlp 腾讯相似詞
 
-这是一个可以调用腾讯OCR API 的命令列工具
+这是一个可以调用腾讯相似詞的命令列工具
 
 ## Installation
 
@@ -29,8 +29,8 @@ gem 'tx_nlp'
 
 ## Usage 使用方式
 
-* tx_nlp url http://xxxxx.jpg # 识别网址图片文字
-* tx_nlp image a.jpg # 识别图片文字
+* tx_nlp word 詞 # 推薦相似詞
+
 
 
 ## Other 其他说明
