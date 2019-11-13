@@ -24,7 +24,9 @@ module TxNlp
       # use user settings
       config_path
     else
-      raise "Can't find config directory. please init by command: 'mygem config'.'"
+      system "mkdir #{config_path}"
+      config_path
+      #raise "Can't find config directory. please init by command: 'mygem config'.'"
     end
   end
 
