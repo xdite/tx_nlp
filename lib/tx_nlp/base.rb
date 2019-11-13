@@ -35,15 +35,15 @@ module TxNlp
 
     def orginal_parameters
       new_hash = fixed_paramaters
-      new_hash['Action'] = @ocr_type
-      new_hash['ImageUrl'] = remote_image_url
+      new_hash['Action'] = @action_type
+      new_hash['Text'] = @encode_text
       to_params(new_hash)
     end
 
     def encode_parameters
       new_hash = fixed_paramaters
-      new_hash['Action'] = @ocr_type
-      new_hash['ImageUrl'] = encoded_image_url
+      new_hash['Action'] = @action_type
+      new_hash['Text'] = @escape_text
       to_params(new_hash)
     end
 
@@ -87,8 +87,7 @@ module TxNlp
       if json['Response']['Error']
         json
       else
-        original_data = json['Response']['TextDetections']
-        original_data.map { |h| h['DetectedText'] }
+        original_data = json['Response']["SimilarWords"]
       end
     end
 
@@ -96,9 +95,7 @@ module TxNlp
       if json['Response']['Error']
         json
       else
-        new_content = raw_result.join('')
-
-        new_content = new_content.gsub('。', "。\n\n")
+        new_content = raw_result.join(',')
 
         new_content
       end

@@ -21,12 +21,8 @@ module TxNlp
       end
     end
 
-    desc 'tx_nlp image FILENAME ', '翻译图片'
-    def image(filename)
-      puts TxNlp::Image.new(filename).indent_result
-    end
 
-    desc 'tx_nlp url URL ', '翻译网址图片'
+    desc 'tx_nlp 詞 ', '建議相似詞'
     def url(url)
       puts TxNlp::Text.new(url).indent_result
     end
