@@ -37,7 +37,7 @@ module TxNlp
     if yml_file
       @config = yml_file
     else
-      File.open(yml_path, 'w') { |f| YAML.dump(@config, f) }
+      @config = nil
     end
   end
 
