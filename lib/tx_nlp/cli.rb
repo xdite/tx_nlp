@@ -23,8 +23,8 @@ module TxNlp
 
 
     desc 'tx_nlp 詞 ', '建議相似詞'
-    def url(url)
-      puts TxNlp::Text.new(url).indent_result
+    def word(word)
+      puts TxNlp::Text.new(word).indent_result
     end
 
     private
