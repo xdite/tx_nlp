@@ -7,7 +7,7 @@ require 'tencent_cos_sdk'
 
 module TxNlp
   class Base
-    HOST = 'ocr.tencentcloudapi.com'
+    HOST = 'nlp.tencentcloudapi.com'
 
     TencentCosSdk.configure do |conf|
       conf.secret_id      = TxNlp.config[:secret_id]
