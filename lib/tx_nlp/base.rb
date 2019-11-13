@@ -13,7 +13,6 @@ module TxNlp
       conf.secret_id      = TxNlp.config[:secret_id]
       conf.secret_key     = TxNlp.config[:secret_key]
       conf.host = "#{TxNlp.config[:bucket]}.cos.#{TxNlp.config[:region]}.myqcloud.com"
-      conf.parent_path = TxNlp.config[:parent_path]
     end
 
 
