@@ -3,18 +3,10 @@ require 'httparty'
 require 'json'
 require 'cgi'
 require 'uri'
-require 'tencent_cos_sdk'
 
 module TxNlp
   class Base
     HOST = 'nlp.tencentcloudapi.com'
-
-    TencentCosSdk.configure do |conf|
-      conf.secret_id      = TxNlp.config[:secret_id]
-      conf.secret_key     = TxNlp.config[:secret_key]
-      conf.host = "#{TxNlp.config[:bucket]}.cos.#{TxNlp.config[:region]}.myqcloud.com"
-    end
-
 
     def region
       TxNlp.config[:region]
