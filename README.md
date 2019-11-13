@@ -1,4 +1,4 @@
-# TxOcr 腾讯OCR
+# TxNlp 腾讯OCR
 
 这是一个可以调用腾讯OCR API 的命令列工具
 
@@ -7,14 +7,14 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'tx_ocr'
+gem 'tx_nlp'
 ```
 
 ## Setting 产生设定
 
-`tx_ocr config`
+`tx_nlp config`
 
-* 这个命列会产生 ~/.tx_ocr/settings.yml
+* 这个命列会产生 ~/.tx_nlp/settings.yml
 * 密钥至 <https://console.cloud.tencent.com/cam/capi> 申请
 * 上传图片使用腾讯 COS https://cloud.tencent.com/product/cos  (选择公开读私有写)
 
@@ -31,8 +31,8 @@ gem 'tx_ocr'
 
 ## Usage 使用方式
 
-* tx_ocr url http://xxxxx.jpg # 识别网址图片文字
-* tx_ocr image a.jpg # 识别图片文字
+* tx_nlp url http://xxxxx.jpg # 识别网址图片文字
+* tx_nlp image a.jpg # 识别图片文字
 
 
 ## Other 其他说明
@@ -49,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/xdite/tx_ocr. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/xdite/tx_nlp. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -57,4 +57,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the TxOcr project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/tx_ocr/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the TxNlp project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/tx_nlp/blob/master/CODE_OF_CONDUCT.md).

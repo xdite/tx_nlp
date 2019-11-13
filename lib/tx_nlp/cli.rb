@@ -1,8 +1,8 @@
 require 'thor'
 require 'active_support/core_ext/string'
-require 'tx_ocr'
+require 'tx_nlp'
 
-module TxOcr
+module TxNlp
   class CLI < Thor
     include Thor::Actions
 
@@ -13,22 +13,22 @@ module TxOcr
     desc 'config', 'change settings'
     def config
 
-      config_path = Dir.home + '/.tx_ocr'
+      config_path = Dir.home + '/.tx_nlp'
       if Dir.exist?(config_path)
-        puts "Your current name is [#{TxOcr.config[:name]}]."
+        puts "Your current name is [#{TxNlp.config[:name]}]."
       else
         template 'templates/settings.yml.tt', "http://#{config_path}/settings.yml"
       end
     end
 
-    desc 'tx_ocr image FILENAME ', '翻译图片'
+    desc 'tx_nlp image FILENAME ', '翻译图片'
     def image(filename)
-      puts TxOcr::Image.new(filename).indent_result
+      puts TxNlp::Image.new(filename).indent_result
     end
 
-    desc 'tx_ocr url URL ', '翻译网址图片'
+    desc 'tx_nlp url URL ', '翻译网址图片'
     def url(url)
-      puts TxOcr::Text.new(url).indent_result
+      puts TxNlp::Text.new(url).indent_result
     end
 
     private

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module TxOcr
+module TxNlp
   class Image < Base
     def initialize(file_path, ocr_type = 'GeneralBasicOCR')
       @file_path = file_path
@@ -13,7 +13,7 @@ module TxOcr
       # 上传
       TencentCosSdk.put new_filename, file: @file_path
 
-      @remote_image_url = "http://#{TxOcr.config[:bucket]}.cos.#{TxOcr.config[:region]}.myqcloud.com" + TxOcr.config[:parent_path] + "/#{new_filename}"
+      @remote_image_url = "http://#{TxNlp.config[:bucket]}.cos.#{TxNlp.config[:region]}.myqcloud.com" + TxNlp.config[:parent_path] + "/#{new_filename}"
 
     end
 

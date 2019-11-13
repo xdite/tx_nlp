@@ -1,18 +1,18 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'tx_ocr/version'
+require 'tx_nlp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'tx_ocr'
-  spec.version       = TxOcr::VERSION
+  spec.name          = 'tx_nlp'
+  spec.version       = TxNlp::VERSION
   spec.authors       = ['xdite']
   spec.email         = ['xuite.joke@gmail.com']
 
-  spec.summary       = 'Tencent OCR CLI'
-  spec.description   = 'Tencent OCR CLI'
-  spec.homepage      = 'https://github.com/xdite/tx_ocr'
+  spec.summary       = 'Tencent NLP CLI'
+  spec.description   = 'Tencent NLP CLI'
+  spec.homepage      = 'https://github.com/xdite/tx_nlp'
   spec.license       = 'MIT'
-  spec.executables << 'tx_ocr'
+  spec.executables << 'tx_nlp'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

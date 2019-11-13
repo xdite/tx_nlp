@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module TxOcr
+module TxNlp
   class Text < Base
     def initialize(file_url, ocr_type = 'GeneralBasicOCR')
       @ocr_type = ocr_type

@@ -5,20 +5,20 @@ require 'cgi'
 require 'uri'
 require 'tencent_cos_sdk'
 
-module TxOcr
+module TxNlp
   class Base
     HOST = 'ocr.tencentcloudapi.com'
 
     TencentCosSdk.configure do |conf|
-      conf.secret_id      = TxOcr.config[:secret_id]
-      conf.secret_key     = TxOcr.config[:secret_key]
-      conf.host = "#{TxOcr.config[:bucket]}.cos.#{TxOcr.config[:region]}.myqcloud.com"
-      conf.parent_path = TxOcr.config[:parent_path]
+      conf.secret_id      = TxNlp.config[:secret_id]
+      conf.secret_key     = TxNlp.config[:secret_key]
+      conf.host = "#{TxNlp.config[:bucket]}.cos.#{TxNlp.config[:region]}.myqcloud.com"
+      conf.parent_path = TxNlp.config[:parent_path]
     end
 
 
     def region
-      TxOcr.config[:region]
+      TxNlp.config[:region]
     end
 
     def url
@@ -26,11 +26,11 @@ module TxOcr
     end
 
     def secret_id
-      TxOcr.config[:secret_id]
+      TxNlp.config[:secret_id]
     end
 
     def secret_key
-      TxOcr.config[:secret_key]
+      TxNlp.config[:secret_key]
     end
 
     def orginal_parameters

@@ -2,7 +2,7 @@ require 'fileutils'
 require 'yaml'
 require 'psych'
 
-module TxOcr
+module TxNlp
   # Configuration defaults
   @config = {
     name: 'default'
@@ -19,7 +19,7 @@ module TxOcr
   end
 
   def self.get_config_path
-    config_path = Dir.home + '/.tx_ocr'
+    config_path = Dir.home + '/.tx_nlp'
     if Dir.exist?(config_path)
       # use user settings
       config_path

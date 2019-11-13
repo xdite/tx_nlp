@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tx_ocr (0.0.1)
+    tx_nlp (0.0.1)
       activesupport
       httparty
       json
@@ -58,7 +58,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   rake (~> 10.0)
-  tx_ocr!
+  tx_nlp!
 
 BUNDLED WITH
    1.17.3
