@@ -31,6 +31,7 @@ gem 'tx_nlp'
 
 * tx_nlp word 詞 # 推薦相似詞
 
+更多詳情請見 https://cloud.tencent.com/document/product/271/35493
 
 
 ## Other 其他说明
