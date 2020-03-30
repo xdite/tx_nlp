@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tx_nlp (0.0.3)
+    tx_nlp (0.0.4)
       activesupport
       httparty
       json

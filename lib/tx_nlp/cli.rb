@@ -27,6 +27,11 @@ module TxNlp
       puts TxNlp::Text.new(word).indent_result
     end
 
+    desc 'tx_nlp 句子 ', '抽取關鍵字'
+    def keyword(keyword)
+      puts TxNlp::Keyword.new(keyword).indent_result
+    end
+
     private
 
     def display_name(name)

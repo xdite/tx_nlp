@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 module TxNlp
-  class Text < Base
-    def initialize(text, action_type = 'SimilarWords')
+  class Keyword < Base
+    def initialize(text, action_type = 'KeywordsExtraction')
       @action_type = action_type
       @encode_text = text.tr("\n", ' ')
       @escape_text = CGI.escape(@encode_text)
@@ -12,7 +10,7 @@ module TxNlp
       if json['Response']['Error']
         json
       else
-        original_data = json['Response']["SimilarWords"]
+        original_data = json['Response']["Keywords"]
       end
     end
 
@@ -25,6 +23,6 @@ module TxNlp
         new_content
       end
     end
-
   end
+
 end
